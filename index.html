@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLMaster</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-database"></i>
+                    <div class="logo">SQL<span> PL/SQL</span></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#SQL"><i class="fas fa-table"></i> SQL</a></li>
+                    <li><a href="#PLSQL"><i class="fas fa-code"></i> PL/SQL</a></li>
+                    <li><a href="./pages/sql/sql.html"><i class="fas fa-list"></i> INTERVIEW</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Master <span>SQL</span> & <span>PL/SQL</span></h1>
+                <p class="subtitle">Comprehensive learning platform with interactive exercises and real-world scenarios</p>
+                <div class="hero-buttons">
+                    <a href="#SQL" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Start Learning
+                    </a>
+                    <a href="https://www.programiz.com/sql/online-compiler" class="btn btn-secondary" id="practiceBtn">
+                        <i class="fas fa-terminal"></i> Practice Now
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./assets/img/14.gif" alt="Database illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- SQL Section -->
+    <section class="topics-section" id="SQL">
+        <div class="container">
+            <div class="section-header">
+                <h2>TOP <span>SQL</span> Topics</h2>
+                <p class="section-subtitle">Oracle SQL concepts you should master</p>
+            </div>
+            <div class="compact-topics-grid">
+                <!-- Basic SQL -->
+                <a href="pages/sql/basic.html" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Basic SQL</h3>
+                        <p>SELECT, WHERE, ORDER BY</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Joins -->
+                <a href="pages/sql/joins.html" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Joins</h3>
+                        <p>INNER, LEFT, RIGHT, FULL</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Aggregation -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Aggregation</h3>
+                        <p>GROUP BY, HAVING, Functions</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Subqueries -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Subqueries</h3>
+                        <p>Nested queries, EXISTS</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Indexes -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Indexes</h3>
+                        <p>Performance optimization</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Views -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Views</h3>
+                        <p>Virtual tables, security</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="section-footer">
+                <a href="./pages/sql_topics.html" class="btn btn-primary">
+                    <i class="fas fa-list"></i> View All SQL Topics
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PL/SQL Section -->
+    <section class="topics-section dark" id="PLSQL">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular <span>PL/SQL</span> Topics</h2>
+                <p class="section-subtitle">Key PL/SQL concepts for database programming</p>
+            </div>
+            <div class="compact-topics-grid">
+                <!-- Blocks -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>PL/SQL Blocks</h3>
+                        <p>Structure, DECLARE, BEGIN</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Procedures -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Procedures</h3>
+                        <p>Stored procedures</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Functions -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-function"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Functions</h3>
+                        <p>Return values, usage</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Triggers -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Triggers</h3>
+                        <p>Event-based execution</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Cursors -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Cursors</h3>
+                        <p>Row-by-row processing</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <!-- Packages -->
+                <a href="#" class="compact-topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div class="topic-info">
+                        <h3>Packages</h3>
+                        <p>Related procedures/functions</p>
+                    </div>
+                    <div class="topic-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="section-footer">
+                <a href="./pages/plsql_topics.html" class="btn btn-primary">
+                    <i class="fas fa-list"></i> View All PL/SQL Topics
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Performance Tuning</h2>
+                <div class="cta-buttons">
+                    <a href="./pages/plsql/performance.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Optimize Query
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-database"></i>
+                       <div class="logo">Ganesh<span> Babu</span></div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Preparation</h3>
+                    <ul>
+                        <li><a href="./pages/sql/sql.html">SQL</a></li>
+                        <li><a href="./pages/plsql/plsql.html">PL/SQL</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div class="footer-col">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="index.html">Home</li>
+                        <li><a href="#">Conatct US</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SQLMaster. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic SQL | SQLMaster</title>
+    <link rel="stylesheet" href="../../assets/css/page_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-database"></i>
+                     <div class="logo">SQL<span> PL/SQL</span></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../sql_topics.html"><i class="fas fa-table"></i> SQL</a></li>
+                    <li><a href="../plsql_topics.html"><i class="fas fa-code"></i> PL/SQL</a></li>
+                    <li><a href="#"><i class="fas fa-list"></i> All Topics</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../all-topics.html">All Topics</a></li>
+                    <li>Basic SQL</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Topic Content -->
+    <section class="topic-content">
+        <div class="container">
+            <div class="topic-header">
+                <h1>JOINS</h1>
+                <div class="topic-meta">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                    <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                    <span class="duration"><i class="fas fa-clock"></i> 2h 00m</span>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <article class="lesson-content">
+
+
+
+
+
+
+<p> Fetching Data From Multiple Table or same Table based on comman column. we perform Join Operation </p>   
+
+<hr>
+
+<h3>Inner Join</h3>
+
+<ul>
+  <li><b>Equi Join</b> - Matched Records</li>
+  <li><b>Outer Join</b> - Matched Records + Unmatched Records
+    <ul>
+      <li><b>Right Outer Join</b> - Matched Records + Unmatched Records From Right Side Table</li>
+      <li><b>Left Outer Join</b> - Matched Records + Unmatched Records From Left Side Table</li>
+      <li><b>Full Outer Join</b> - Matched Records + Unmatched Records From Both Tables</li>
+    </ul>
+  </li>
+  <li><b>Self Join</b></li>
+  <li><b>Cross Join</b></li>
+  <li><b>Natural Join</b> - [Equi Join]</li>
+</ul>
+
+ <br><hr>
+
+<h3>Equi JOINS</h4>
+<pre><code>	
+SELECT s.s_name
+     , s.c_id
+     , c.c_name
+  FROM table1 s, table2 c
+WHERE s.c_id = c.c_id;
+</pre></code>
+
+ <br><hr>	
+<h3>Outer JOINS</h4>
+<h4>ROJ		- Right Outer Join</h5>
+<pre><code>	
+SELECT s.s_name
+     , s.c_id
+     , c.c_name
+  FROM table1 s RIGHT OUTER JOIN table2 c
+ON s.c_id = c.c_id;
+	
+SELECT s.s_name
+     , s.c_id
+     , c.c_name
+  FROM table1 s, table2 c
+WHERE s.c_id(+) = c.c_id;
+</pre></code>	
+
+ <br><hr>	
+<h4>LOJ	- Left Outer Join</h5>
+<pre><code>	
+SELECT s.s_name
+     , s.c_id
+     , c.c_name
+  FROM table1 s, table2 c
+WHERE s.c_id = c.c_id(+);
+
+SELECT s.s_name
+     , s.c_id
+     , c.c_name
+  FROM table1 s LEFT OUTER JOIN table2 c
+ON s.c_id = c.c_id(+);
+</pre></code>
+ <br><hr>		
+<h4>FOJ	-	Full Outer Join</h5>	 
+				
+<pre><code>
+SELECT s.s_name
+     , s.c_id
+     , c.c_name
+  FROM table1 s, table2 c
+WHERE s.c_id = c.c_id(+)
+UNION
+SELECT s.s_name
+     , s.c_id
+     , c.c_name
+  FROM table1 s, table2 c
+WHERE s.c_id(+) = c.c_id;
+
+
+SELECT s.s_name
+     , s.c_id
+     , c.c_name
+  FROM table1 s FULL OUTER JOIN table2 c
+ON s.c_id = c.c_id;
+</pre></code>	
+	 
+
+ <br><hr>
+<h3>Equi Join (Matched Records from Both Table)</h3> 
+<pre><code>
+SELECT employees.employee_id
+     , employees.first_name
+     , employees.hire_date
+     , employees.salary
+     , employees.department_id
+     , departments.department_name
+FROM employees, departments
+WHERE employees.department_id = departments.department_id;
+
+
+SELECT e.employee_id
+     , e.first_name
+     , e.hire_date
+     , e.salary
+     , d.department_name
+FROM employees e, departments d
+WHERE e.department_id = d.department_id;
+</pre></code>
+
+ <br><hr>
+<h3>Outer Join  - Matched + Unmatched Records</h4>
+<pre>
+
+ROJ		-	Matched Record + Unmatched Record from Right side Table
+LOJ		-	Matched Record + Unmacthed Record from Left side Table
+FOJ 	        -	Matched Record + Unmatched Record from Both Table.
+
+</pre>
+
+<h3>ROJ - Matched Record + Unmatched Record from Right side Table.</h4>
+<pre><code>
+SELECT e.employee_id
+     , e.first_name
+     , e.department_id
+     , e.salary
+     , d.department_name
+     , d.manager_id
+  FROM employees e, departments d
+WHERE e.department_id (+) = d.department_id;
+
+SELECT e.employee_id
+     , e.first_name
+     , e.department_id
+     , e.salary
+     , d.department_name
+  FROM employees e RIGHT OUTER JOIN departments d
+ON e.department_id  = d.department_id;
+
+</pre></code>
+ <br><hr>
+
+<h3>LOJ - Matched Record + Unmatched Record from Left side Table</h4>
+<pre><code>
+SELECT e.employee_id
+     , e.first_name
+     , e.department_id
+     , e.salary
+     , d.department_name
+     , d.manager_id
+  FROM employees e, departments d
+WHERE e.department_id = d.department_id (+);
+
+SELECT e.employee_id
+     , e.first_name
+     , e.department_id
+     , e.salary
+     , d.department_name
+     , d.manager_id
+  FROM employees e LEFT OUTER JOIN departments d
+ON e.department_id = d.department_id;
+
+</pre></code>
+
+ <br><hr>
+<h3>FOJ - Macthed + Unmatched Record from Both Tables.</h4>
+<pre><code>
+SELECT e.employee_id
+     , e.first_name
+     , e.department_id
+     , e.salary
+     , d.department_name
+     , d.manager_id
+  FROM employees e FULL OUTER JOIN departments d
+ON e.department_id = d.department_id;
+</pre></code>
+ <br><hr>
+<h4>No of records Returned By Join Statement.</h5>
+<pre><code>
+SELECT COUNT(*)
+FROM employees e, departments d
+WHERE e.department_id = d.department_id;
+
+</pre></code>
+<hr>
+
+
+<h3>Self Join (Selected Data within a Table)</h4>
+
+<h4>Display the employees with manager name, hire_date and manager salary.</h5>
+<pre><code>
+SELECT e.employee_id
+     , e.first_name
+     , e.hire_date
+     , e.salary
+     , e.manager_id
+     , m.first_name manager_name
+     , m.hire_date  manager_hdt
+     , m.salary  manager_salary
+FROM employees e, employees m
+WHERE e.manager_id = m.employee_id;
+</pre></code>
+ <br><hr>
+<h3>Who are getting Salary more than their Manager Salary?</h4>
+<pre><code>
+SELECT e.employee_id
+     , e.first_name
+     , e.hire_date
+     , e.salary
+     , e.manager_id
+     , m.first_name manager_name
+     , m.hire_date manager_hdt
+     , m.salary manager_salary
+FROM employees e, employees m
+WHERE e.manager_id = m.employee_id
+AND  e.salary > m.salary;
+</pre></code>
+ <br><hr>
+<h3>Who are all hired before Manager?</h4>
+<pre><code>
+SELECT e.employee_id
+     , e.first_name
+     , e.hire_date
+     , e.salary
+     , e.manager_id
+     , m.first_name manager_name
+     , m.hire_date  manager_hdt
+     , m.salary  manager_salary
+FROM employees e, employees m
+WHERE e.manager_id = m.employee_id
+AND e.hire_date < m.hire_date;
+</pre></code>
+ <br><hr>
+<h3>FULL Outer JOIN</h4>
+<pre><code>
+-- ANSI Standard
+SELECT e.employee_id
+     , e.first_name
+     , e.hire_date
+     , e.salary
+     , e.department_id
+     , d.department_name
+FROM employees e FULL OUTER JOIN departments d
+  ON e.department_id = d.department_id;
+</pre></code>
+ <br><hr>  
+<h3>CROSS Join 	- cartesian Join / Product</h4>
+
+	Wrong Join - Cross JOIN
+	If you ignore the Join condition invalid Join Condition
+	All the Rows in the first table will Join with all the Rows with Second Table.
+<pre><code>
+SELECT e.employee_id
+     , e.first_name
+     , e.hire_date
+     , e.salary
+     , e.manager_id
+     , m.first_name
+     , m.hire_date
+     , m.salary
+FROM employees e CROSS JOIN employees m			
+</pre></code>
+ <br><hr>
+<h3>Write a query to get unmatched record from left side Table</h4>
+<pre><code>
+SELECT employee_id
+  , first_name
+  , hire_date
+  , salary
+  , department_name
+FROM employees e, departments d
+WHERE e.department_id = d.department_id(+)
+AND e.department_id IS NULL;
+
+SELECT employee_id
+  , first_name
+  , hire_date
+  , salary
+  , department_name
+FROM employees e LEFT OUTER JOIN departments d
+ON e.department_id = d.department_id
+WHERE d.department_id IS NULL;
+</pre></code>
+
+ <br><hr>
+
+<h3>Write a query to get unmatched record from right side table.</h4>
+<pre><code>	
+SELECT employee_id
+  , first_name
+  , hire_date
+  , salary
+  , department_name
+FROM employees e, departments d
+WHERE e.department_id(+) = d.department_id
+AND e.department_id IS NULL;
+
+SELECT employee_id
+  , first_name
+  , hire_date
+  , salary
+  , department_name
+FROM employees e RIGHT OUTER JOIN departments d
+ON e.department_id = d.department_id
+AND e.department_id IS NULL;
+</pre></code>
+ <br><hr>
+
+<h3>Write a query to get unmatched record from both table.</h3> 
+<pre><code>
+SELECT employee_id
+     , first_name
+     , hire_date
+     , salary
+     , department_name
+FROM employees e FULL OUTER JOIN departments d
+ON e.department_id = d.department_id
+MINUS
+SELECT employee_id
+     , first_name
+     , hire_date
+     , salary
+     , department_name
+FROM employees e, departments d
+WHERE e.department_id = d.department_id;
+
+
+SELECT employee_id
+     , first_name
+     , hire_date
+     , salary
+     , department_name
+FROM employees e FULL OUTER JOIN departments d
+ON e.department_id = d.department_id
+WHERE e.department_id IS NULL OR d.department_id IS NULL;
+</pre></code>
+
+ <br><hr>
+
+<h3>How to select data from 3 different table.</h3>
+<pre><code>
+SELECT e.employee_id
+	 , e.first_name
+	 , e.hire_date
+	 , e.salary
+	 , d.department_id
+	 , d.department_name
+	 , l.location_id
+	 , l.street_address
+FROM employees e, departments d, locations l
+WHERE e.department_id = d.department_id 
+AND   d.location_id = l.location_id;
+</pre></code>
+
+<pre>
+--Condition--
+
+n   = n-1 condition
+
+100 = 99 condition
+</pre>
+<pre><code>
+SELECT e.employee_id
+     , e.first_name
+     , e.hire_date
+     , e.salary
+     , d.department_id
+     , d.department_name
+     , l.location_id
+     , l.street_address
+FROM employees e JOIN departments d ON e.department_id = d.department_id 
+JOIN locations l ON d.location_id = l.location_id
+--WHERE e.department_id = d.department_id								
+WHERE d.department_id = e.department_id;				-- Good L->R
+</pre></code>
+
+<br><hr>
+
+
+
+<h3>Natural JOIN</h3>
+
+	No need to use common condition
+<pre><code>
+SELECT e.employee_id
+     , e.first_name
+     , e.hire_date
+     , department_id
+     , d.department_name
+FROM employees e NATURAL JOIN departments d;	-- only 32 records will fetch bcs there are 2 column column
+
+
+SELECT department_id
+     , l.street_address
+FROM departments d NATURAL JOIN locations l;	-- only 1 common column fetch all records
+</pre></code>
+
+<h3>Natual Join with Using Clause</h3>
+<pre><code>
+SELECT d.department_id
+     , d.department_name
+     , location_id
+     , l.street_address
+FROM departments d JOIN locations l
+USING(location_id);
+</pre></code>
+
+ <br><hr>
+
+<h3>Non Inner JOIN</h3>
+<pre><code>
+SELECT od.odr_id
+     , od.cust_id
+	 , od.odr_amt
+	 , op.offer_pct
+  FROM order_tb od
+     , offer_pct op
+ WHERE od.odr_amt BETWEEN op.l_limit and op.u_limit;
+</pre></code>
+
+ <br><hr>
+
+<h3>Interview Question:</h3>
+
+<h3>1. No of records returned by this Join statement?</h3>
+<pre><code>
+SELECT employee_id
+	, first_name
+	, hire_date
+	, salary
+	, department_name
+  FROM employees e, departments d
+WHERE d.department_id(+) = e.department_id;
+
+
+SELECT COUNT(*)						-- simply remove all columns and add COUNT(*)
+  FROM employees e, departments d
+WHERE d.department_id(+) = e.department_id;
+</pre></code>
+
+ <br><hr>
+
+<h3>2. Is Natural Join and Equi Join is Same</h3>
+
+<p>Yes But in Equi Join we use Condition</p>
+
+    <br><hr>
+
+<h3>3. Is Inner Join and Self Join is Same</h3>
+
+<p>yes what are the Join condition written with = is Inner Join </p>
+
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="lesson-navigation-buttons">
+                <a href="../sql_topics.html" class="btn btn-outline disabled">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </a>
+                <a href="#" class="btn btn-primary">
+                    Next <i class="fas fa-chevron-right"></i>
+                </a>
+                
+            </div>
+
+
+
+                </article>
+ 
+                
+<!--
+
+                <aside class="lesson-navigation">
+
+
+   
+                    <h3>Lessons in this Topic</h3>
+                    <ul>
+                        <li class="active"><a href="#">Introduction to SQL</a></li>
+                        <li><a href="#">SELECT Statement Basics</a></li>
+                        <li><a href="#">Filtering with WHERE</a></li>
+                        <li><a href="#">Sorting with ORDER BY</a></li>
+                        <li><a href="#">Limiting Results</a></li>
+                        <li><a href="#">Basic Exercises</a></li>
+                    </ul>
+
+                    
+                    <div class="progress-container">
+
+                        <h4>Your Progress</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 25%"></div>
+                        </div>
+                        <span>25% Complete</span>
+
+
+                    </div>
+                </aside>
+            </div>
+
+
+    
+            
+            <div class="lesson-navigation-buttons">
+                <a href="#" class="btn btn-outline disabled">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </a>
+                <a href="#" class="btn btn-primary">
+                    Next <i class="fas fa-chevron-right"></i>
+                </a>
+                
+            </div>
+ 
+  -->          
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+    
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-database"></i>
+                        <span>SQLMaster</span>
+                    </div>
+                    <p>Your complete resource for mastering SQL and PL/SQL</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>SQL Topics</h3>
+                    <ul>
+                        <li><a href="basic.html">Basic Queries</a></li>
+                        <li><a href="joins.html">Joins</a></li>
+                        <li><a href="#">Subqueries</a></li>
+                        <li><a href="#">Aggregation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>PL/SQL Topics</h3>
+                    <ul>
+                        <li><a href="#">Blocks</a></li>
+                        <li><a href="#">Procedures</a></li>
+                        <li><a href="#">Functions</a></li>
+                        <li><a href="#">Triggers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Cheat Sheets</a></li>
+                        <li><a href="#">Practice</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SQLMaster. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic SQL | SQLMaster</title>
+    <link rel="stylesheet" href="../../assets/css/page_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-database"></i>
+                     <div class="logo">SQL<span> PL/SQL</span></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../sql_topics.html"><i class="fas fa-table"></i> SQL</a></li>
+                    <li><a href="../plsql_topics.html"><i class="fas fa-code"></i> PL/SQL</a></li>
+                    <li><a href="#"><i class="fas fa-list"></i> All Topics</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="../all-topics.html">All Topics</a></li>
+                    <li>Basic SQL</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Topic Content -->
+    <section class="topic-content">
+        <div class="container">
+            <div class="topic-header">
+                <h1>INTRODUCTION</h1>
+                <div class="topic-meta">
+                    <span class="difficulty-badge beginner">Beginner</span>
+                    <span class="lesson-count"><i class="fas fa-list-ol"></i> 12 lessons</span>
+                    <span class="duration"><i class="fas fa-clock"></i> 2h 15m</span>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <article class="lesson-content">
+
+
+
+
+
+ <h3>1. Back End?</h3>
+    <ul>
+    <li>Oracle (SQl & PLSQL)</li>
+    <li>MYSQL (Owned By Oracle)</li>
+    <li>MS SQL Server</li>
+    <li>SQL Lite</li>
+    <li>Postgre SQL</li>
+    <li>Mongo DB</li>
+    <li>Maria DB</li>
+    <li>IBM DB2</li>
+    <li>Redis</li>
+    <li>Microsoft Azure</li>
+     </ul>
+     <br><hr><br>
+     
+     
+    <h3>2. Oracle Was Developed ?</h3>
+        
+        <p>C programming Language in 1977</p>
+    <br><hr><br>
+    
+    <h3>3. Oracle Versions?</h3>
+    <ul>
+    <li>6i</li>
+    <li>7i</li>
+    <li>8i</li>
+    <li>9i</li>
+    <li>10g - Express Edition</li>
+    <li>11g </li>
+    <li>12C	- Using</li>
+    <li>18C</li>
+    <li>19C</li>
+    <li>21C</li>
+    <li>23AI</li>
+        <br>
+    <code>i for Internet    |   	g for grid  	 |	  C for Cloud</code>    
+        
+    </ul>
+    <br><hr><br>
+    
+    <h3>4. Client Side Tools?</h3>
+    <ul>
+    <li>SQLPlus</li>
+    <li>SQL Developer</li>
+    <li>PLSQL Developer</li>
+    <li>Toad</li>
+    </ul>  
+    
+    <br><hr><br>
+    
+    <h3>5. What is User | Row | output </h3>
+    <ul>
+    <li>User - Schema</li>
+    <li>Row - Record</li>
+    <li>Output - Resultset</li>
+    </ul>
+    <br><hr><br> 
+        
+    <h3>6. What are the Schema Objects or Database Objects?</h3>
+    <ul>
+    <li>TABLE</li>
+    <li>VIEW</li>
+    <li>SEQUENCE</li>
+    <li>SYNONYM</li>
+    <li>INDEX</li>
+    <li>Materialized View</li>
+    <li>Stored PROCEDURE</li>
+    <li>Stored function</li>
+    <li>TRIGGER</li>
+    <li>Package</li>
+    </ul>
+    <br><hr><br>
+            
+ <h3>7. What is Schema Objects?</h3>
+ <p>List of Objects which hold by Schema.</p>
+ 
+ <br><hr><br>
+ 
+ <h3>8. Types of Tables in Oracle?</h3>
+ <ol>
+ <li><strong>User Table</strong> - Which Contains User Information, Created and Maintained By User. tables like <em> order_tb, Intventory_tb, product_tb;</em>
+ <li><strong>Data Dictionary Table</strong> - Which Contains Database Information, Created and Maintained By Database. Tables like <em>all_objects, all_tables,all_indexes,all_views, all_tab_columns;</em>
+ </ol>
+ <br><hr><br>
+ 
+ <h3>9. SQL Bit Wise Operator?</h3>
+ <ul>
+ <li>& - AND	</li>
+ <li>| - OR</li>
+ <li>^ - exclusive OR</li>
+ <li>~ - Not </li>
+ </ul>
+ <br><hr><br>
+ 
+ <h3>10. What is Database?</h3>
+ <p>Database is a Collection of Oranized data,  stored and accessed from local or remote.</p>		
+ 
+ <br><hr><br>
+ 
+ <h3>11. What is RDBMS?</h3>
+ <ul>
+ <li>RDBMS - Relational Database Management System</li>
+ <li>RDBMS is a program used to maintain a relational database</li>
+ <li>RDBMS is the basis for all modern database systems such as MySQL, Microsoft SQL Server, Oracle.</li>
+ <li>RDBMS uses SQL queries to access the data in the database.</li>
+ </ul>
+ 
+ <br><hr><br>
+             <h3>12. Diff DBMS and RDBMS?</h3>
+             <table>
+                 
+                 <thead>
+                     <tr>
+                         <th><center>DBMS</center></th>
+                         <th><center>RDBMS</center></th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td>1. DBMS stands for Database Management System 	</td>
+                         <td>Relational Database Management System</td>
+                     </tr>
+                     <tr>
+                         <td>2. DBMS store the Data in the form of Files	</td>
+                         <td>RDBMS store the Data in the form of Tables</td>
+ 
+                     </tr>
+                     <tr>
+                         <td>3. DBMS designed to handle small amount of DATA	</td>
+                         <td>RDBMS designed to Handle Large DATA</td>
+                     </tr>
+ 
+                     <tr>
+                         <td>4. DBMS support single user at a TIME</td>
+                         <td>RDBMS support multiple user at a Time.</td>
+                     </tr>
+                 </tbody>
+             </table>
+ <br><hr><br>
+ 
+    
+ <h3>13. What is Alias (AS)?</h3>
+ <ul>
+ <li>Used to rename column heading</li>
+ <li>column_name / expression As "ALIAS_NAME"</li>
+ <li>Mostly used with expression</li>
+ </ul>
+ 
+ <br><hr><br>
+ 
+ <h3>14. What is NULL</h3>
+    <p>NULL is a Unknown VALUE</p>
+ <ul>
+ <li>NULL <> 0</li>
+ <li>NULL <> Space </li>
+ <li>NULL <> NULL</li>
+ <li>NULL + Number = NULL</li>
+ </ul>
+    <p>Any Arithmatic Operator with NULL is NULL</p> 
+ <br><hr><br>	
+ 
+ 
+ <h3>15. Relational Operator?</h3>
+ <ul>
+ <li> >=  greater than equal</li>
+ <li> <=  lessthan equal</li>
+ <li> <> , != ,  ^= ,  not eaqual to</li>
+ </ul>
+ <br><hr><br>
+ 
+ 
+ 
+ <h3>16. Oracle Operators</h3>
+<code>
+<ul>
+    <li>IN          | NOT IN </li>
+    <li>BETWEEN AND |  NOT BETWEEN AND </li>
+    <li>LIKE         |  NOT LIKE</li>
+    <li>IS NULL      |  IS NOT NULL</li>
+ </ul>
+</code>
+     <br><hr><br>
+ 
+ 
+     <h3>17. Logical Operators.</h3>
+     <ul>
+     <li>AND</li>
+     <li>OR</li>
+     <li>NOT</li>
+     </ul>
+     <br><hr>
+ 
+ 
+     <h3>18. IN Process NULL</h3>
+     <p>NO</p>
+     <hr>
+     
+ <h3>19. Pattern Matching | Wildcard Search?</h3>
+    <p>LIKE OPERATOR</p> 
+ 
+ <hr>   
+ 
+ 
+ 
+ <h3> 20. Difference Between Substring and Instring</h3>
+ 
+             <table>
+                 
+                 <thead>
+                     <tr>
+                         <th><center>SUBSTR</center></th>
+                         <th><center>INSTR</center></th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td>1.Used to get part of the String	</td>
+                         <td>Used to get the position of the particular character.</td>
+                     </tr>
+                     <tr>
+                         <td>2. It has 3 argumnets: Input String, Starting Poisition, No of Characters to be print	</td>
+                         <td>It hasd 4 Arguments Input string, Character to be search, starting position, no of occurance</td>
+ 
+                     </tr>
+                    
+                 </tbody>
+             </table>
+
+ 
+ 
+ <h3>21. Oracle Functions</h3>
+ <ul>
+   <li>
+     Single Row Function (n->n)
+     <span class="note">-- n number of rows input and n number of rows output</span>
+   </li>
+   <li>
+     Multiple Row Function (n->1)
+     <span class="note">-- n number of rows input and 1 number of row output</span>
+   </li>
+ </ul>
+ 
+ <br>
+
+ <h3>1. Single Row Function</h3>
+ <ul>
+   <li>Case Function</li>
+   <li>Number Function</li>
+   <li>Date Function</li>
+   <li>Type Conversion</li>
+   <li>General Function | NULL Function</li>
+ </ul>
+ 
+ <h3>(i) Case Function</h3>
+ <ul>
+   <li>
+     Case Manipulation
+     <ul>
+         <li>UPPER()</li>
+         <li>LOWER()</li>
+         <li>INITCAP()</li>
+       </ul>
+   </li>
+   <li>
+     Character Manipulation
+     <ul>
+         <li> LENGTH ()</li>
+         <li> CONCAT()</li>
+         <li> REVERSE()</li>
+         <li> SUBSTR() | INSTR()</li>
+         <li> LPAD()| RPAD()</li>
+         <li> LTRIM ()| RTRIM()</li>
+         <li> REPLACE () | TRANSLATE ()</li>
+       </ul>
+   </li>
+ </ul>
+
+ 
+  <h3>(ii) Number Function</h3>
+  <ul>
+    <li>ROUND()</li>
+    <li>TRUNC()</li>
+    <li>CEIL()</li>
+    <li>FLOOR()</li>
+    <li>MOD()</li>
+    <li>ABS()</li>
+    <li>SIGN()</li>
+  </ul>
+</div>
+ 
+
+ <h3>(iii) Date Function</h3>
+ <ul>
+     <li>MONTHS_BETWEEN ()</li>
+     <li>ADD_MONTHS()</li>
+     <li>NEXT_DAY ()</li>
+     <li>LAST_DAY()</li>
+   </ul>
+ 
+ <h3>(iv) Type Conversion</h3>
+ <ul>
+     <li>TO_CHAR()</li>
+     <li>TO_NUMBER()</li>
+     <li>TO_DATE()</li>
+     <li>TO_TIMESTAMP()</li>
+   </ul>
+ 
+ <h3>(v) General Function | NULL Function</h3>
+ <ul>
+     <li>NVL()</li>
+     <li>NVL2()</li>
+     <li>NULLIF()-- return null value if 2 expression is same otherwise it return 1st expression.</li>
+     <li>COALESCE()-- print 1st not NULL value</li>
+   </ul>
+ 
+ <h3>(2) Group Function | Aggregate Function</h3>
+ <ul>
+     <li>MIN()</li>
+     <li>MAX()</li>
+     <li>SUM()</li>
+     <li>AVG()</li>
+     <li>COUNT()</li>
+     <li>GROUP BY</li>
+     <li>HAVING</li>
+   </ul>
+ 
+ <br><hr>
+ 
+ <h3>22. How many Nested Function we can Write?</h3>
+     <p>255 Nested Functions.</p>
+ 
+ <hr>
+ 
+ 
+ <h3> 23. Difference Between NVL and NVL2</h3>
+ 
+             <table>
+                 
+                 <thead>
+                     <tr>
+                         <th><center>NVL</center></th>
+                         <th><center>NVL2</center></th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td>1. NVL has 2 arguments</td>
+                         <td>NVL2 has 3 arguments</td>
+                     </tr>
+                     <tr>
+                         <td>2. If 1st argument is NULL it return 2nd argument otherwise it return 1st argument</td>
+                         <td>IF 1st argument is NULL it return 3rd argument otherwise return 2nd</td>
+ 
+                     </tr>
+                    
+                 </tbody>
+             </table>
+
+ 
+ 
+ <h3>24. Query Execution Order.</h3>
+ <ul>
+ <li>FROM </li>
+ <li>WHERE</li> 
+ <li>GROUP BY </li>
+ <li>HAVING </li>
+ <li>SELECT </li>
+ <li>ORDER BY</li> 
+ </ul>
+ 
+ ---
+ 
+ <ul>	
+     <li>FROM</li> 
+     <li>ON</li> 
+     <li>JOIN</li> 
+     <li>WHERE</li> 
+     <li>GROUP BY</li> 
+               --WITH CUBE or WITH ROLLUP
+     <li>HAVING</li> 
+     <li>SELECT</li> 
+     <li>DISTINCT</li> 
+     <li>ORDER BY </li> 
+     <li>LIMIT</li> 
+ </ul>
+ 
+ <br><hr>
+ 
+ 
+ <h3> 25. Difference Between WHERE clause and HAVING clause</h3>
+ 
+             <table>
+                 
+                 <thead>
+                     <tr>
+                         <th><center>WHERE Clause</center></th>
+                         <th><center>HAVING Clause</center></th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td>1. WHERE follows FROM clause</td>
+                         <td>HAVING clause follows GROUP clause</td>
+                     </tr>
+                     <tr>
+                         <td>2. If it is a Normal Condition use WHERE clause</td>
+                         <td>Condition depends on Having Clause</td>
+ 
+                     </tr>
+                     <tr>
+                         <td>3. Restriction will happen after fetching</td>
+                         <td>Restrinction will happen after Grouping</td>
+                     </tr>
+                    
+                 </tbody>
+             </table>
+
+ 
+ 
+ <h3>26. Difference between Decode () and Case ()</h3>
+     <ul>
+     <li>Decode is a Function</li>
+     <li>Case is an Expression</li>
+     </ul>
+     <table>
+                 
+         <thead>
+             <tr>
+                 <th><center>Decode</center></th>
+                 <th><center>CASE</center></th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>1. Decode is a Function </td>
+                 <td>CASE is a Expression</td>
+             </tr>
+             <tr>
+                 <td>2. Exact Match we use </td>
+                 <td>We can use any Operators like <,>,+,<=</td>
+ 
+             </tr>
+             <tr>
+                 <td>3. Oracle Standard</td>
+                 <td>ANSI</td>
+             </tr>
+             <tr>
+                 <td>4. We can use in SQL</td>
+                 <td>we can use in both SQL and Pl/SQL</td>
+             </tr>
+             <tr>
+                 <td>5. Slow</td>
+                 <td>Fast</td>
+             </tr>
+            
+         </tbody>
+     </table>
+ 
+     <ul>
+         <li>Decode can use in PLSQL but have some Limitations</li>
+         <li>Deocode can use only for compare equality not other conditions <, > </li>
+         <li>Decode return single value </li>
+         <li>Decode makes context switch b/w sql and plsql </li>
+         </ul>
+ 
+ <br><hr>
+ 
+ <h3>27. What is Join and Types of Join?</h3>
+     
+Fetching Data from multiple table based on common column 
+ 
+     <ul>
+         <li>Equi Join (Matched Record)</li>
+         <li>Outer Join (Matched Record + Unmatched Record)
+           <ul>
+             <li>Left Outer Join (Matched Record + Unmatched Record From Left side Table)</li>
+             <li>Right Outer Join (matched Record + Unmatched Record From Right side Table)</li>
+             <li>Full Outer Join (Matched Record + Unmatched Record From Both side Table)</li>
+           </ul>
+         </li>
+         <li>Self Join -- selecting data within a table</li>
+         <li>Cross Join</li>
+         <li>Natural Join</li>
+       </ul>
+ <br><hr>
+ 
+ <h3>28. What is CROSS Join 	- Cartesian Join / Product.</h3>
+     <p>Cross Join also called Wrong Join
+     <p>If you ignore the Join condition | invalid Join Condition
+     <p>All the Rows in the first table will Join with all the Rows with Second Table.
+ 
+ <br><hr><br>
+ 
+ <h3>29. How to Avoid Cross Join?</h3>
+     <p>By using Proper Join condition </p>
+ 
+     <hr>
+ 
+ <h3>30. How to get Unmatched Record?</h3>
+     <p>Full Outer Join Minus Equi Join </p>
+ 
+ 
+<hr>
+ 
+ <h3>31. Sub Query?</h3>
+     <p>Query Within another Query
+     <p>The Inner Query writen inside () - parenthesis
+     <p>Inner Query will get executed first based on that Outer Query will execute.
+     
+ 
+ <h4><u>Types</u></h4>
+     <ul>
+ <li>Single Row Subquery</li>
+ <li>Multiple Row Sub Query</li>
+ <li>Scalar Subquery (SELECT clause)</li>
+ <li>Inline View (FROM clause)</li>
+ <ul>
+ <li>	Multiple Column Subquery</li>
+ <li>	Correlated Subquery</li>
+ </ul>
+ </ul>
+ 
+ <br><hr>
+ 
+ <h3>32. Single Row Subquery and its Operators?</h3>
+     <p>If a query return exactly one row.
+     <p>Relational Operators : < , > , <=, >=, <>
+ 
+ <h4> Who are all getting salary more than Avg salary of the company?</h4>
+ <pre>
+ <code>
+ SELECT *
+   FROM employees 
+ WHERE salary > (SELECT AVG(salary) FROM employees); 
+     </code>
+ </pre>
+ 
+ <hr>
+ <h3>33. Multiple Row Subquery?</h3>
+     <p>If a query return more than one row.
+     <p>Comparison Operators : IN ANY ALL
+ 
+ <h4> Display all department_names which contains employees?</h4>
+ <pre>
+ <code>
+ SELECT * 
+   FROM departments
+ WHERE department_id IN (SELECT department_id FROM employees)
+ </code>
+ </pre>
+
+ <hr>
+ <h3>34. Inline View?</h3>
+     <p>Query written in FROM Clause
+     <p>We are selecting Data from Intermediate Resultset.
+     
+ <h4> Display all the departments which contain more no of employees?</h4>
+            
+            <pre>
+            
+ SELECT X.* 
+  FROM (SELECT department_id, COUNT(*) dcount 
+         FROM employees 
+        GROUP BY department_id) X
+    , (SELECT MAX(COUNT(*)) dmcount 
+          FROM employees 
+       GROUP BY department_id) Y
+       WHERE X.dcount = Y.dmcount;
+        
+            </pre>
+            <br><hr>
+            
+            <h3>35. Correlated Sub Query or Synchronized Subquery?</h3>
+                <p>Outer Query will execute FIRST
+                <p>based on that inner query will get execute
+                <p>We cant execute Inner Query alone
+                <p>For each row input will be different.</p>
+            
+            <h4>Display who are all getting salary more than avg salary of their department.</h4>
+            
+                    <pre>
+               
+SELECT e.employee_id
+     , e.first_name
+     , e.hire_date
+     , e.salary
+     , e.department_id
+ FROM employees e
+WHERE e.salary >(SELECT AVG(salary) 
+                   FROM employees 
+                 WHERE department_id = e.department_id);
+              
+                    </pre>
+ 
+            
+            <br><hr><br>
+            
+<h3>36. Types of Statements?</h3>
+
+
+<h4>1. DDL - Data Definition Language (CARDT)</h4>
+<ul>
+    <li>CREATE            </li>
+    <li>ALTER
+        <ul>
+            <li>ADD MODIFY RENAME DROP     -- Column Level</li>
+        </ul>
+    </li>
+    <li>RENAME</li>
+    <li>DROP</li>
+    <li>TRUNCATE</li>
+</ul>
+
+<h4>2. DML - Data Manipulation Language (Data)</h4>
+<ul>
+    <li>INSERT  </li>
+    <li>UPDATE</li>
+    <li>DELETE</li>
+    <li>MERGE   (INSERT+UPDATE)      </li>
+</ul>
+
+<h4>3. TCL - Transaction Control Language</h4>
+<ul>
+    <li>COMMIT</li>
+    <li>ROLLBACK</li>
+    <li>SAVEPOINT</li>
+</ul>
+
+<h4>4. DCL - Data Control Language</h4>
+<ul>
+    <li>GRANT</li>
+    <li>REVOKE</li>
+</ul>
+
+<br><hr><br>
+
+
+<h3>37. Data Types in Oracle.</h3>
+<ul>
+<li> CHAR</li>
+<li> VARCHAR</li>
+<li> NUMBER (p, s)	</li>	
+<li> DATE</li>
+<li> TIMESTAMP</li>
+<li> LONG	</li>		 
+<li> CLOB					-- upload files</li>
+<li> BLOB					-- upload images</li>
+<li> RAW</li>
+<li> XML_TYPE</li>
+<li> ROWID</li>
+</ul>
+
+
+<br><hr><br>
+
+<h3>38. LONG </h3>
+     <p>Store 2gb 
+     <p>Per Table 1 LONG
+     <p>Cannot use in ORDER BY | GROUP BY
+     <p>Cannot Copy Long Column.
+    
+<br><hr><br>	
+
+<h3>39. Size of VARCHAR</h3>
+    <p>Default : 4000 	--  upto 11g
+    <p>Increase : 32767 --12c,18c,19c
+
+<br><hr><br>
+
+<h3>40. CLOB?</h3>
+    <p>Store 4gb of Data.
+    <p>Per Table 1 CLOB
+    <p>Cannot use in ORDER BY | GROUP BY
+    <p>Cannot Copy CLOB Column.
+     
+        <br><hr><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="lesson-navigation-buttons">
+                <a href="../sql_topics.html" class="btn btn-outline disabled">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </a>
+                <a href="#" class="btn btn-primary">
+                    Next <i class="fas fa-chevron-right"></i>
+                </a>
+                
+            </div>
+
+
+
+                </article>
+ 
+                
+<!--
+
+                <aside class="lesson-navigation">
+
+
+   
+                    <h3>Lessons in this Topic</h3>
+                    <ul>
+                        <li class="active"><a href="#">Introduction to SQL</a></li>
+                        <li><a href="#">SELECT Statement Basics</a></li>
+                        <li><a href="#">Filtering with WHERE</a></li>
+                        <li><a href="#">Sorting with ORDER BY</a></li>
+                        <li><a href="#">Limiting Results</a></li>
+                        <li><a href="#">Basic Exercises</a></li>
+                    </ul>
+
+                    
+                    <div class="progress-container">
+
+                        <h4>Your Progress</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 25%"></div>
+                        </div>
+                        <span>25% Complete</span>
+
+
+                    </div>
+                </aside>
+            </div>
+
+
+    
+            
+            <div class="lesson-navigation-buttons">
+                <a href="#" class="btn btn-outline disabled">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </a>
+                <a href="#" class="btn btn-primary">
+                    Next <i class="fas fa-chevron-right"></i>
+                </a>
+                
+            </div>
+ 
+  -->          
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+    
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-database"></i>
+                        <span>SQLMaster</span>
+                    </div>
+                    <p>Your complete resource for mastering SQL and PL/SQL</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>SQL Topics</h3>
+                    <ul>
+                        <li><a href="basic.html">Basic Queries</a></li>
+                        <li><a href="joins.html">Joins</a></li>
+                        <li><a href="#">Subqueries</a></li>
+                        <li><a href="#">Aggregation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>PL/SQL Topics</h3>
+                    <ul>
+                        <li><a href="#">Blocks</a></li>
+                        <li><a href="#">Procedures</a></li>
+                        <li><a href="#">Functions</a></li>
+                        <li><a href="#">Triggers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Cheat Sheets</a></li>
+                        <li><a href="#">Practice</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SQLMaster. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All SQL Topics | SQLMaster</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-database"></i>
+                    <div class="logo">SQL<span> PL/SQL</span></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="./sql_topics.html"><i class="fas fa-code"></i> SQL</a></li>
+                    <li><a href="./plsql/plsql.html"><i class="fas fa-star"></i> INTERVIEW</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li>All SQL Topics</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- All SQL Topics Section -->
+    <section class="all-topics" id="SQL">
+        <div class="container">
+            <div class="section-header">
+                <h1>Oracle <span>PL/SQL</span></h1>
+                <p class="section-subtitle">Comprehensive list of PL/SQL concepts and techniques</p>
+            </div>
+
+
+<!--  Search and Filter 
+           
+            <div class="topic-filters">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search SQL topics...">
+                    <button id="searchButton"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="btn btn-outline active" data-filter="all">All</button>
+                    <button class="btn btn-outline" data-filter="beginner">Beginner</button>
+                    <button class="btn btn-outline" data-filter="intermediate">Intermediate</button>
+                    <button class="btn btn-outline" data-filter="advanced">Advanced</button>
+                </div>
+            </div>
+
+  -->
+
+
+            <!-- Topics Grid -->
+            <div class="masonry-grid" id="topicsGrid">
+
+
+                <!-- Anonymous Block -->
+                <div class="masonry-item" data-difficulty="beginner">
+                    <a href="../pages/sql/basic.html" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+                            <span class="difficulty-badge beginner">Beginner</span>
+                        </div>
+                        <h3>Anonymous Block</h3>
+                        <p>RDBMS Database Like Oracle Introduction and versions</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 35m</span>
+                        </div>
+                    </a>
+                </div>
+                
+
+                <!-- Retriving Data -->
+                <div class="masonry-item" data-difficulty="beginner">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <span class="difficulty-badge beginner">Beginner</span>
+                        </div>
+                        <h3>Retriving Data</h3>
+                        <p>Master SELECT statements, filtering, sorting, and basic data retrieval operations.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 12 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 15m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Restriction -->
+                <div class="masonry-item" data-difficulty="beginner">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-table"></i>
+                            </div>
+                            <span class="difficulty-badge beginner">Beginner</span>
+                        </div>
+                        <h3>Data Restriction</h3>
+                        <p>WHERE clause to filter rows in SQL queries, Selecting specific Data.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 12 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 15m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                  <!-- Functions -->
+                <div class="masonry-item" data-difficulty="beginner">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                            <span class="difficulty-badge beginner">Beginner</span>
+                        </div>
+                        <h3>Functions</h3>
+                        <p>Perform calculations, string manipulations, and date/time formatting, within SQL queries.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 12 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 2h 45m</span>
+                        </div>
+                    </a>
+                </div>      
+
+
+                  <!-- Decode -->
+                <div class="masonry-item" data-difficulty="beginner">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-file-shield"></i>
+                            </div>
+                            <span class="difficulty-badge beginner">Beginner</span>
+                        </div>
+                        <h3>Decode & Case</h3>
+                        <p>Perform IF-THEN-ELSE logic,  conditional logic within a SQL query</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 12 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>    
+
+
+
+                <!-- Joins -->
+                <div class="masonry-item" data-difficulty="intermediate">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <span class="difficulty-badge intermediate">Intermediate</span>
+                        </div>
+                        <h3>Joins</h3>
+                        <p>Understand different join types, inner,outer,self join with practical examples.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 15 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 40m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Sub Query -->
+                <div class="masonry-item" data-difficulty="intermediate">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-regular fa-file"></i>
+                            </div>
+                            <span class="difficulty-badge intermediate">Intermediate</span>
+                        </div>
+                        <h3>Sub Query</h3>
+                        <p>Query nested inside another SQL query, used to retrieve data from outer query.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 2h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Statements -->
+                <div class="masonry-item" data-difficulty="intermediate">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-regular fa-newspaper"></i>
+                            </div>
+                            <span class="difficulty-badge intermediate">Intermediate</span>
+                        </div>
+                        <h3>Statements</h3>
+                        <p>The fundamental units of work in SQL, including DDL, DML, DCL, TCL Statements.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 4 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 2h 20m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- SQL Plus -->
+                <div class="masonry-item" data-difficulty="intermediate">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-regular fa-window-maximize"></i>
+                            </div>
+                            <span class="difficulty-badge intermediate">Intermediate</span>
+                        </div>
+                        <h3>SQL Plus</h3>
+                        <p>A command-line utility for interacting with Oracle databases, executing SQL and PL/SQL.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 15 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Constraints -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Constraints</h3>
+                        <p>Understand PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK and other constraints.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 10m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <!-- Merge -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Merge</h3>
+                        <p>Conditionally updates or inserts rows into a target table based on the results of a join with a source.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 0h 45m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Pseudocolumn -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-regular fa-copy"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Pseudocolumn</h3>
+                        <p>Virtual columns in Oracle not actually stored but provide useful information about the data</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 0h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                      
+                <!-- Aggregation -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                           <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Aggregation Functions</h3>
+                        <p>Learn GROUP BY, HAVING, and aggregate functions for data summarization.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 45m</span>
+                        </div>
+                    </a>
+                </div>
+                
+
+
+
+                <!-- Sequence -->
+                <div class="masonry-item" data-difficulty="beginner">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-regular fa-window-maximize"></i>
+                            </div>
+                            <span class="difficulty-badge beginner">beginner</span>
+                        </div>
+                        <h3>Sequence</h3>
+                        <p>Generates a sequential series of numeric values, often used to create unique identifiers.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <!-- Views -->
+                <div class="masonry-item" data-difficulty="intermediate">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <span class="difficulty-badge intermediate">Intermediate</span>
+                        </div>
+                        <h3>Views</h3>
+                        <p>Create and manage database views for simplified querying and security.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 2 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                
+                <!-- Indexes -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Indexes</h3>
+                        <p>Learn how to create and optimize indexes for better query performance.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 2h 00m</span>
+                        </div>
+                    </a>
+                </div>
+                
+
+                
+                <!-- SQL Loader -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-download"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>SQL Loader</h3>
+                        <p>Command-line utility for bulk loading data from flat files into Oracle database tables.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 2 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <!-- Synonym -->
+                <div class="masonry-item" data-difficulty="beginner">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-font"></i>
+                            </div>
+                            <span class="difficulty-badge beginner">beginner</span>
+                        </div>
+                        <h3>Synonym</h3>
+                        <p>Alias name given to a database object (like a table or view), simplifying its reference.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 0h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <!-- Set Operator -->
+                <div class="masonry-item" data-difficulty="intermediate">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-link"></i>
+                            </div>
+                            <span class="difficulty-badge intermediate">Intermediate</span>
+                        </div>
+                        <h3>Set Operator</h3>
+                        <p>Combine results of multiple SELECT statements (like UNION, UNION ALL, INTERSECT, MINUS).</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 3 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- GTT & PTT -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-hourglass-start"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>GTT & PTT</h3>
+                        <p>Temporary Table whose data is either session-specific or transaction-specific.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 2 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- CTE -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-repeat"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>CTE</h3>
+                        <p>Temporary, named result set defined within single SQL statement used to simplify complex queries.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <!-- MULTI -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-table-list"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Multi Table Insert</h3>
+                        <p>Inserting rows into multiple tables simultaneously based on a single SELECT statement.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 0h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Data Pump -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Data Pump</h3>
+                        <p>Moving data into Oracle databases performance than traditional export/import.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                 <!-- Hierarchical Query -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Hierarchical Query</h3>
+                        <p>Processes data in a hierarchical structure, often using CONNECT BY clause.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 2 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 45m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                 <!-- Materialized View -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Materialized View</h3>
+                        <p>Mview contains data Unlike a regular view, the results are stored, allowing for faster access.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 0h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                 <!-- Table Partitioning -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Table Partitioning</h3>
+                        <p>Dividing a large table into smaller, more manageable pieces called partitions.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 4 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Cluster -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Cluster</h3>
+                        <p>Groups tables with common columns physically together to improve data retrieval.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 0h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                 <!-- Hints -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Hints</h3>
+                        <p>Embedded within SQL statements to guide the Oracle optimizer choose best execution plan.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+                 <!-- Deadlock -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Deadlock</h3>
+                        <p>Two or more transactions are blocked indefinitely, each waiting for the other to release a resource.</p>
+                        <div class="card-footer">   
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 0h 15m</span>
+                        </div>
+                    </a>
+                </div>
+
+                 <!-- Invisible Column -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Invisible Column</h3>
+                        <p>A column in a table that is hidden by default, it's not displayed in standard SELECT * queries.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 0h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                 <!-- Regular Expressions -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Regular Expressions</h3>
+                        <p>Regular Expressions to perform complex string matching and manipulation.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+                 <!-- Virtual Column -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Virtual Column</h3>
+                        <p>A column not physically stored in the table but dynamically based on other columns.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+                 <!-- Identity Column -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>Identity Column</h3>
+                        <p> A column automatically assigned a unique, sequential integer value upon row insertion.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+                 <!-- External Table -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">Advanced</span>
+                        </div>
+                        <h3>External Table</h3>
+                        <p> Querying data stored in files outside the Oracle database they were regular database tables.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+                 <!-- Dynamic SQL -->
+                <div class="masonry-item" data-difficulty="intermediate">
+                    <a href="#" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge intermediate">intermediate</span>
+                        </div>
+                        <h3>Dynamic SQL</h3>
+                        <p> SQL statements constructed and executed at runtime, providing flexibility.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 1 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 1h 00m</span>
+                        </div>
+                    </a>
+                </div>
+
+                 <!-- Performance Tuning -->
+                <div class="masonry-item" data-difficulty="advanced">
+                    <a href="../pages/plsql/performance.html" class="modern-topic-card">
+                        <div class="card-header">
+                            <div class="topic-icon">
+                               <i class="fa-solid fa-envelopes-bulk"></i>
+                            </div>
+                            <span class="difficulty-badge advanced">advanced</span>
+                        </div>
+                        <h3>Performance Tuning</h3>
+                        <p>Optimizing database and query execution to improve speed, efficiency, and resource utilization.</p>
+                        <div class="card-footer">
+                            <span class="lesson-count"><i class="fas fa-list-ol"></i> 2 lessons</span>
+                            <span class="duration"><i class="fas fa-clock"></i> 3h 30m</span>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<!--Pagination 
+
+
+            <div class="pagination">
+                <button class="btn btn-outline disabled" id="prevPage">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="page-numbers">
+                    <button class="btn btn-outline active">1</button>
+                    <button class="btn btn-outline">2</button>
+                    <button class="btn btn-outline">3</button>
+                    <span>...</span>
+                    <button class="btn btn-outline">8</button>
+                </div>
+                <button class="btn btn-outline" id="nextPage">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+-->
+
+
+
+        </div>
+    </section>
+
+  
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="btn btn-outline disabled" id="prevPage">
+                    <i class="fas fa-chevron-left"></i> HOME
+                </button>
+<!--
+                <div class="page-numbers">
+                    <button class="btn btn-outline active">1</button>
+                    <button class="btn btn-outline">2</button>
+                    <button class="btn btn-outline">3</button>
+                    <span>...</span>
+                    <button class="btn btn-outline">8</button>
+                </div>
+-->
+
+&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+
+                <button class="btn btn-outline" id="nextPage">
+                    PL/SQL <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--PL/SQL Section Anchor 
+    <section id="PLSQL" style="height: 0; overflow: hidden;"></section>
+
+-->
+<br><br>
+
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-database"></i>
+                       <div class="logo">Ganesh<span>Babu</span></div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Preparation</h3>
+                    <ul>
+                        <li><a href="../pages/sql/sql.html">SQL</a></li>
+                        <li><a href="../pages/plsql/plsql.html">PL/SQL</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div class="footer-col">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</li>
+                        <li><a href="#">Conatct US</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SQLMaster. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/all-topics.js"></script>
+</body>
+</html>
