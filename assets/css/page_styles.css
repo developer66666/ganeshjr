@@ -112,37 +112,186 @@ p {
 
 
 
-/* Code Blocks */
-code {
-    font-family: 'Courier New', Courier, monospace;
 
-    padding: 0.2rem 0.4rem;
-    border-radius: var(--radius-sm);
-    font-size: 0.9em;
-    word-break: break-word; /* Prevent long code from breaking layout */
-}
 
-pre {
-    background-color: var(--light-gray); /* Using your CSS variable */
-    border-radius: var(--radius-md);
-    padding: 1rem;
-    margin: 1.25rem 0;
-    overflow-x: auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    border-left: 4px solid var(--primary);
-    box-shadow: var(--shadow-sm); /* Added subtle shadow */
-}
 
-pre code {
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
-    color: inherit;
-    font-size: inherit;
-    white-space: pre; /* Preserve code formatting */
-}
+        /* Code block styling */
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            -webkit-overflow-scrolling: touch;
+            white-space: pre-wrap;       /* Allows text to wrap */
+            word-wrap: break-word;      /* Breaks long words */
+            word-break: break-all;       /* Breaks at any character if needed */
+        }
+
+        code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: inherit;
+            white-space: pre-wrap;       /* Inherits wrapping from pre */
+        }
+
+        /* Line numbers (optional) */
+        pre.line-numbers {
+            position: relative;
+            padding-left: 3.8em;
+            counter-reset: linenumber;
+        }
+
+        pre.line-numbers > code {
+            position: relative;
+        }
+
+        pre.line-numbers .line-number-rows {
+            position: absolute;
+            pointer-events: none;
+            top: 0;
+            font-size: 100%;
+            left: -3.8em;
+            width: 3em;
+            letter-spacing: -1px;
+            border-right: 1px solid #999;
+            user-select: none;
+        }
+
+        pre.line-numbers .line-number-rows > span {
+            display: block;
+            counter-increment: linenumber;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+        pre.line-numbers .line-number-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+        }
+
+        /* Syntax highlighting (example colors) */
+        .token.comment,
+        .token.prolog,
+        .token.doctype,
+        .token.cdata {
+            color: #5c6370;
+            font-style: italic;
+        }
+
+        .token.punctuation {
+            color: #abb2bf;
+        }
+
+        .token.property,
+        .token.tag,
+        .token.boolean,
+        .token.number,
+        .token.constant,
+        .token.symbol,
+        .token.deleted {
+            color: #d19a66;
+        }
+
+        .token.selector,
+        .token.attr-name,
+        .token.string,
+        .token.char,
+        .token.builtin,
+        .token.inserted {
+            color: #98c379;
+        }
+
+        .token.operator,
+        .token.entity,
+        .token.url,
+        .language-css .token.string,
+        .style .token.string {
+            color: #56b6c2;
+        }
+
+        .token.atrule,
+        .token.attr-value,
+        .token.keyword {
+            color: #c678dd;
+        }
+
+        .token.function,
+        .token.class-name {
+            color: #e5c07b;
+        }
+
+        .token.regex,
+        .token.important,
+        .token.variable {
+            color: #e06c75;
+        }
+
+        /* Mobile-specific adjustments */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            pre {
+                padding: 12px;
+                font-size: 13px;
+                border-radius: 4px;
+                margin: 15px 0;
+                white-space: pre-wrap; /* Ensure wrapping on mobile */
+            }
+
+            pre.line-numbers {
+                padding-left: 3.2em;
+            }
+
+            pre.line-numbers .line-number-rows {
+                left: -3.2em;
+                width: 2.8em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            pre {
+                padding: 10px;
+                font-size: 12px;
+                /* More aggressive line breaking for very small screens */
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+
+            pre.line-numbers {
+                padding-left: 2.8em;
+            }
+
+            pre.line-numbers .line-number-rows {
+                left: -2.8em;
+                width: 2.5em;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Tables */
 table {
