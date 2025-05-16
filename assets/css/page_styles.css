@@ -42,11 +42,15 @@ body {
     overflow-x: hidden;
 }
 
+
 /* Typography Enhancements */
+
 h1 {
     font-size: 30px;
     color: var(--primary);
 }
+
+
 
 h2 {
     font-size: 36px;
@@ -55,15 +59,18 @@ h2 {
     margin-bottom: 50px;
 }
 
+
 h3 {
-    margin-bottom: 15px;
-    margin-top: 20px;
+  margin-bottom: 15px; 
+  margin-top: 20px;
 }
 
 h4 {
-    margin-bottom: 15px;
-    margin-top: 20px;
+  margin-bottom: 15px; 
+  margin-top: 20px;
+
 }
+
 
 p {
     margin: 10px 0;
@@ -73,6 +80,7 @@ p {
     white-space: pre-line;
     display: block;
 }
+
 
 .left-align {
     text-align: left;
@@ -98,67 +106,194 @@ p {
     white-space: pre-line;
 }
 
-/* Code Blocks - Optimized */
-pre {
-    background-color: #282c34;
-    color: #abb2bf;
-    padding: 16px;
-    border-radius: 6px;
-    overflow-x: auto;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    -webkit-overflow-scrolling: touch;
-    white-space: pre;
-    word-wrap: normal;
-}
 
-code {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: inherit;
-    white-space: pre;
-    display: block;
-    min-width: min-content;
-}
 
-/* Line numbers */
-pre.line-numbers {
-    position: relative;
-    padding-left: 3.8em;
-    counter-reset: linenumber;
-}
 
-pre.line-numbers > code {
-    position: relative;
-}
 
-pre.line-numbers .line-number-rows {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    font-size: 100%;
-    left: -3.8em;
-    width: 3em;
-    letter-spacing: -1px;
-    border-right: 1px solid #999;
-    user-select: none;
-    white-space: nowrap;
-}
 
-pre.line-numbers .line-number-rows > span {
-    display: block;
-    counter-increment: linenumber;
-    padding-right: 0.8em;
-    text-align: right;
-}
 
-pre.line-numbers .line-number-rows > span:before {
-    content: counter(linenumber);
-    color: #999;
-}
 
-/* Tables - Optimized */
+
+
+        /* Code block styling */
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            -webkit-overflow-scrolling: touch;
+            white-space: pre-wrap;       /* Allows text to wrap */
+            word-wrap: break-word;      /* Breaks long words */
+            word-break: break-all;       /* Breaks at any character if needed */
+        }
+
+        code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: inherit;
+            white-space: pre-wrap;       /* Inherits wrapping from pre */
+        }
+
+        /* Line numbers (optional) */
+        pre.line-numbers {
+            position: relative;
+            padding-left: 3.8em;
+            counter-reset: linenumber;
+        }
+
+        pre.line-numbers > code {
+            position: relative;
+        }
+
+        pre.line-numbers .line-number-rows {
+            position: absolute;
+            pointer-events: none;
+            top: 0;
+            font-size: 100%;
+            left: -3.8em;
+            width: 3em;
+            letter-spacing: -1px;
+            border-right: 1px solid #999;
+            user-select: none;
+        }
+
+        pre.line-numbers .line-number-rows > span {
+            display: block;
+            counter-increment: linenumber;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+        pre.line-numbers .line-number-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+        }
+
+        /* Syntax highlighting (example colors) */
+        .token.comment,
+        .token.prolog,
+        .token.doctype,
+        .token.cdata {
+            color: #5c6370;
+            font-style: italic;
+        }
+
+        .token.punctuation {
+            color: #abb2bf;
+        }
+
+        .token.property,
+        .token.tag,
+        .token.boolean,
+        .token.number,
+        .token.constant,
+        .token.symbol,
+        .token.deleted {
+            color: #d19a66;
+        }
+
+        .token.selector,
+        .token.attr-name,
+        .token.string,
+        .token.char,
+        .token.builtin,
+        .token.inserted {
+            color: #98c379;
+        }
+
+        .token.operator,
+        .token.entity,
+        .token.url,
+        .language-css .token.string,
+        .style .token.string {
+            color: #56b6c2;
+        }
+
+        .token.atrule,
+        .token.attr-value,
+        .token.keyword {
+            color: #c678dd;
+        }
+
+        .token.function,
+        .token.class-name {
+            color: #e5c07b;
+        }
+
+        .token.regex,
+        .token.important,
+        .token.variable {
+            color: #e06c75;
+        }
+
+        /* Mobile-specific adjustments */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            pre {
+                padding: 12px;
+                font-size: 13px;
+                border-radius: 4px;
+                margin: 15px 0;
+                white-space: pre-wrap; /* Ensure wrapping on mobile */
+            }
+
+            pre.line-numbers {
+                padding-left: 3.2em;
+            }
+
+            pre.line-numbers .line-number-rows {
+                left: -3.2em;
+                width: 2.8em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            pre {
+                padding: 10px;
+                font-size: 12px;
+                /* More aggressive line breaking for very small screens */
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+
+            pre.line-numbers {
+                padding-left: 2.8em;
+            }
+
+            pre.line-numbers .line-number-rows {
+                left: -2.8em;
+                width: 2.5em;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -166,15 +301,16 @@ table {
     font-size: 0.95rem;
     box-shadow: var(--shadow-sm);
     border-radius: var(--radius-md);
-    background-color: white;
+    overflow: hidden;
+    background-color: white; /* Ensure contrast */
 }
 
 th, td {
-    padding: 0.875rem 1.25rem;
+    padding: 0.875rem 1.25rem; /* Slightly more padding */
     text-align: left;
     border-bottom: 1px solid var(--light-gray);
     border-right: 1px solid var(--light-gray);
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease; /* Smooth hover transition */
 }
 
 th {
@@ -183,39 +319,90 @@ th {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    font-size: 0.85rem;
+    font-size: 0.85rem; /* Slightly smaller for headers */
 }
 
 tr:nth-child(even) {
-    background-color: rgba(233, 236, 239, 0.3);
+    background-color: rgba(233, 236, 239, 0.3); /* More subtle zebra striping */
 }
 
 tr:hover {
-    background-color: rgba(51, 51, 51, 0.08);
+    background-color: rgba(51, 51, 51, 0.08); /* More subtle hover effect */
 }
 
+/* Remove right border from last column */
 th:last-child, td:last-child {
     border-right: none;
 }
 
+/* Remove bottom border from last row */
 tbody tr:last-child td {
     border-bottom: none;
 }
 
-/* Lists */
+
+
+
 ul {
-    list-style-type: disc;
-    padding-left: 40px;
+  list-style-type: disc; /* Or any other main bullet style */
+  padding-left: 40px; /* Adjust this value for the main bullet indentation */
 }
 
 ul ul {
-    list-style-type: circle;
-    padding-left: 30px;
+  list-style-type: circle; /* Or any other sub-bullet style */
+  padding-left: 30px; /* Adjust this value for the sub-bullet indentation */
 }
 
 ol {
-    padding-left: 40px;
+  padding-left: 40px; /* Adjust this value for the main bullet indentation */
 }
+
+
+
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        box-shadow: none;
+        border-radius: 0;
+        border: 1px solid var(--light-gray);
+    }
+    
+    th, td {
+        padding: 0.75rem 1rem;
+    }
+}
+
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Layout */
 .container {
@@ -249,6 +436,11 @@ section {
     margin: 0 auto;
     color: var(--gray);
 }
+
+
+
+
+
 
 /* Buttons */
 .btn {
@@ -713,6 +905,7 @@ footer {
     gap: 0.5rem;
     font-size: 1.5rem;
     font-weight: 700;
+    margin-bottom: 1rem;
     color: white;
 }
 
@@ -769,6 +962,109 @@ footer {
 
 .footer-links a:hover {
     color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        box-shadow: var(--shadow-xl);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .mobile-menu {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .mobile-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .mobile-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .hero {
+        padding: 7rem 0 3rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
 }
 
 /* Breadcrumb */
@@ -1179,139 +1475,16 @@ footer {
     margin-top: 2rem;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 992px) {
-    .hero .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 3rem;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    h2 {
-        font-size: 2rem;
-    }
-}
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    /* Table Mobile Styles */
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        border-radius: 0;
-        box-shadow: none;
-        border: 1px solid var(--light-gray);
+    .compact-topics-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
     
-    /* Visual indicator for scrollable tables */
-    table:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 40px;
-        height: 100%;
-        background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
-        pointer-events: none;
+    .masonry-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
     
-    th, td {
-        padding: 0.75rem 1rem;
-    }
-    
-    /* Keep table headers visible while scrolling */
-    thead {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-    
-    /* Code Block Mobile Styles */
-    pre {
-        padding: 12px;
-        font-size: 13px;
-        border-radius: 4px;
-        margin: 15px 0;
-    }
-    
-    pre.line-numbers {
-        padding-left: 3.2em;
-    }
-    
-    pre.line-numbers .line-number-rows {
-        left: -3.2em;
-        width: 2.8em;
-    }
-    
-    /* Navigation */
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: 100vh;
-        background-color: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        transition: right 0.3s ease;
-        box-shadow: var(--shadow-xl);
-    }
-    
-    .nav-links.active {
-        right: 0;
-    }
-    
-    .mobile-menu {
-        display: flex;
-        z-index: 1001;
-    }
-    
-    .mobile-menu.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    
-    .mobile-menu.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .mobile-menu.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    
-    .hero {
-        padding: 7rem 0 3rem;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    /* Layout adjustments */
     .content-wrapper {
         flex-direction: column;
     }
@@ -1327,42 +1500,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    /* Smaller mobile adjustments */
-    pre {
-        padding: 10px;
-        font-size: 12px;
-    }
-    
-    pre.line-numbers {
-        padding-left: 2.8em;
-    }
-    
-    pre.line-numbers .line-number-rows {
-        left: -2.8em;
-        width: 2.5em;
-    }
-    
-    .container {
-        padding: 0 1rem;
-    }
-    
-    section {
-        padding: 3rem 0;
-    }
-    
-    h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.75rem;
-    }
-    
-    .section-header h2 {
-        font-size: 2rem;
-    }
-}
+
 
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
